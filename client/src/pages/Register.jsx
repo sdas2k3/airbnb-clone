@@ -10,24 +10,25 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let data = { name, email, password };
-    // console.log(data)
-    try {
-      const response  = await axios.post("/register", data);
-      data = response.data
-      console.log(response)
-      console.log(data)
-      if (data === "User with same email already exists") {
-        toast.error(data);
-      } else {
-        toast.success("Registered Successfully", {
-          position: "top-right",
-        });
-        setRedirect(true);
-      }
-    } catch (error) {
-      toast.error(error);
-    }
-    // console.log(data)
+    console.log(data)
+    toast.success("Registered Successfully", {
+      position: "top-right",
+    });
+    // try {
+    //   const response  = await axios.post("/register", data);
+    //   data = response.data
+    //   console.log(response)
+    //   console.log(data)
+    //   if (data === "User with same email already exists") {
+    //     toast.error(data);
+    //   } else {
+        
+    //     setRedirect(true);
+    //   }
+    // } catch (error) {
+    //   toast.error(error);
+    // }
+    // // console.log(data)
   };
 
   if (redirect) {

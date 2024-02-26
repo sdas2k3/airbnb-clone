@@ -20,11 +20,11 @@ const PORT = 4000;
 const bcryptSalt = bcrypt.genSaltSync(12);
 const jwtSecret = "sdgucsiufhshcsadcnsiofrwjf123e3144";
 // console.log(__dirname)
-config();
+config(); 
 
 app.use(
   cors({
-    credentials: true,
+    credentials: true, 
     origin: true,
   })
 );
